@@ -37,12 +37,9 @@ class PostController extends Controller
      * add post
      * @param request validation of post
      */
-    public function store(Request $request)
+    public function store()
     {
-        $post = Post::create($request->all());
-        if ($post) {
-            return redirect()->route('post.index')->with('success', 'insert successfully');
-        }
+        
     }
 
     /**
